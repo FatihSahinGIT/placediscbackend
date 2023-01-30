@@ -63,7 +63,7 @@ mongoose
   )
   .then(() => {
     console.log("Datenbank verbunden!");
-    app.listen(8080);
+    app.listen(process.env.PORT);
   })
   .catch((error) => {
     throw new HTTPError("Datenbank Verbindung fehlgeschlagen!", error);
