@@ -67,5 +67,6 @@ mongoose
     app.listen(process.env.PORT);
   })
   .catch((error) => {
+    console.log(process.env.DB_NAME, process.env.DB_USER, process.env.JWT_KEY, process.env.PORT);
     throw new HTTPError("Datenbank Verbindung fehlgeschlagen!", error);
   });
