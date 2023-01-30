@@ -1,0 +1,8 @@
+{
+  "env": {
+    "DB_USER": "fasa",
+    "DB_PW": "03ksfO4vpX6jneqW",
+    "DB_NAME": "placedisc",
+    "JWT_KEY": "ssecretopus"
+  }
+}
