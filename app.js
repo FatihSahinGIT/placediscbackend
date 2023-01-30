@@ -59,11 +59,11 @@ app.use((error, req, res, next) => {
 // mongoose
 mongoose
   .connect(
-    `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PW}@cluster0.ivpev.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`
+    `mongodb+srv://fasa:03ksfO4vpX6jneqW@cluster0.ivpev.mongodb.net/placediscprod?retryWrites=true&w=majority`
   )
   .then(() => {
     console.log("Datenbank verbunden!");
-    app.listen(process.env.PORT);
+    app.listen(2000);
   })
   .catch((error) => {
     throw new HTTPError("Datenbank Verbindung fehlgeschlagen!", error);
