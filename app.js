@@ -37,10 +37,6 @@ app.use("/api/users", usersRoutes);
 // access images
 app.use("/uploads/images", express.static(path.join("uploads", "images")));
 
-app.use((req, res, next) => {
-  res.sendFile(path.resolve(__dirname, "public", "index.html"));
-});
-
 // error handling
 app.use((error, req, res, next) => {
   if (req.file) {
@@ -61,12 +57,6 @@ mongoose
     `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PW}@cluster0.ivpev.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`
   )
   .then(() => {
-    console.log(
-      process.env.DB_NAME,
-      process.env.DB_USER,
-      process.env.JWT_KEY,
-      process.env.PORT
-    );
     console.log("Datenbank verbunden!");
     app.listen(process.env.PORT);
   })
